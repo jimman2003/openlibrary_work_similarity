@@ -37,8 +37,8 @@ function* findGroupsOfSimilar(authorWorks, similarityThreshold = 0.9) {
     if (similarWorks.maxSimilarity > similarityThreshold) {
       groups.push(similarWorks);
       entries = entries.filter((entry) => !similarWorks.works.includes(entry));
-      yield similarWorks.works.map((work) => work.key.replace('/works/', '')).join(',');
-    }//(similarWorks.works.map((work) => work.title)
+      yield similarWorks.works.map((work) => work.key.replace('/works/', '')).join(',');    
+    }
   }
 }
 
